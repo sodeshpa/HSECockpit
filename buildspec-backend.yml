@@ -1,0 +1,50 @@
+version: 0.2
+
+env:
+  variables:
+    DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+    DOTNET_NOLOGO: "1"
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+    commands:
+      - echo "Installing .NET 8 SDK tools..."
+
+  pre_build:
+    commands:
+      - echo "Restoring NuGet packages..."
+      - dotnet restore backend/D4HSE.sln
+      - echo "Logging in to Amazon ECR..."
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REPOSITORY_URI
+
+  build:
+    commands:
+      - echo "Building .NET solution..."
+      - dotnet build backend/D4HSE.sln --configuration Release --no-restore
+      - echo "Running tests..."
+      - dotnet test backend/D4HSE.sln --configuration Release --no-build --logger "trx;LogFileName=test-results.trx"
+      - echo "Building Docker image..."
+      - docker build -t d4hse-api -f backend/D4HSE.Api/Dockerfile backend/
+      - echo "Tagging Docker image..."
+      - docker tag d4hse-api:latest $ECR_REPOSITORY_URI:latest
+      - docker tag d4hse-api:latest $ECR_REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
+
+  post_build:
+    commands:
+      - echo "Pushing Docker image to ECR..."
+      - docker push $ECR_REPOSITORY_URI:latest
+      - docker push $ECR_REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - echo "Writing image definitions file..."
+      - printf '[{"name":"HSECockpit-API-Container","imageUri":"%s"}]' $ECR_REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
+    - "**/test-results.trx"
+  discard-paths: no
+
+cache:
+  paths:
+    - '/root/.nuget/packages/**/*'

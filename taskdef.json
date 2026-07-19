@@ -1,0 +1,109 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:633339938619:task-definition/HSECockpit-API:5",
+    "containerDefinitions": [
+        {
+            "name": "HSECockpit-API-Container",
+            "image": "633339938619.dkr.ecr.us-east-1.amazonaws.com/hsecockpit-api:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [
+                {
+                    "name": "Cognito__Authority",
+                    "value": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_DqjAmxc0t"
+                },
+                {
+                    "name": "ConnectionStrings__HseCockpit",
+                    "value": "Host=hsecockpit-dev-databasest-hsecockpitpostgresqlfbfe-wl3pl0hpvaby.ckvsas8s0qv4.us-east-1.rds.amazonaws.com;Port=5432;Database=hsecockpit;Username=hsecockpit_admin;Password=IE3S9x2fjkRRNSAFq3^I,KSvfioRzs"
+                },
+                {
+                    "name": "Cognito__ClientId",
+                    "value": "1n1j1g2q6rh4pacsjjpgssr4e9"
+                },
+                {
+                    "name": "ASPNETCORE_ENVIRONMENT",
+                    "value": "Development"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "HSECockpit-dev-ComputeStack-HSECockpitTaskDefHSECockpitAPIContainerLogGroup3B02D58A-qbX3XjMWtq2F",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "hsecockpit-api"
+                },
+                "secretOptions": []
+            },
+            "systemControls": [],
+            "credentialSpecs": []
+        }
+    ],
+    "family": "HSECockpit-API",
+    "taskRoleArn": "arn:aws:iam::633339938619:role/HSECockpit-dev-ComputeSta-HSECockpitTaskDefTaskRole-dbNt0AXJPNBE",
+    "executionRoleArn": "arn:aws:iam::633339938619:role/HSECockpit-dev-ComputeSta-HSECockpitTaskDefExecutio-Do2hYsgvmpeq",
+    "networkMode": "awsvpc",
+    "revision": 5,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "MANAGED_INSTANCES",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "registeredAt": "2026-07-19T23:42:40.861000+05:30",
+    "registeredBy": "arn:aws:sts::633339938619:assumed-role/cdk-hnb659fds-cfn-exec-role-633339938619-us-east-1/AWSCloudFormation"
+}

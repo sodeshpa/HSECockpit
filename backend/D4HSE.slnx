@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="D4HSE.Api/D4HSE.Api.csproj" />
+  <Project Path="D4HSE.Core/D4HSE.Core.csproj" />
+  <Project Path="D4HSE.Infrastructure/D4HSE.Infrastructure.csproj" />
+  <Project Path="D4HSE.Ingestion/D4HSE.Ingestion.csproj" />
+  <Project Path="D4HSE.Services/D4HSE.Services.csproj" />
+</Solution>

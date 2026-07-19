@@ -1,0 +1,36 @@
+version: 0.2
+
+env:
+  variables:
+    DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+    DOTNET_NOLOGO: "1"
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+      nodejs: 20
+    commands:
+      - echo "Installing AWS CDK CLI..."
+      - npm install -g aws-cdk
+
+  pre_build:
+    commands:
+      - echo "Restoring NuGet packages..."
+      - dotnet restore infrastructure/HSECockpit.Infra.sln
+
+  build:
+    commands:
+      - echo "Building infrastructure solution..."
+      - dotnet build infrastructure/HSECockpit.Infra.sln --configuration Release --no-restore
+      - echo "Synthesizing CloudFormation templates..."
+      - cd infrastructure/HSECockpit.Infra && cdk synth
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "infrastructure/HSECockpit.Infra/cdk.out"
+
+cache:
+  paths:
+    - '/root/.nuget/packages/**/*'

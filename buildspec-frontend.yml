@@ -1,0 +1,44 @@
+version: 0.2
+
+env:
+  variables:
+    NODE_VERSION: "20"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing Node.js 20..."
+      - node --version
+      - npm --version
+
+  pre_build:
+    commands:
+      - echo "Installing frontend dependencies..."
+      - npm ci --prefix frontend
+
+  build:
+    commands:
+      - echo "Running linter..."
+      - npm run lint --prefix frontend
+      - echo "Running tests..."
+      - npm run test --prefix frontend
+      - echo "Building frontend..."
+      - npm run build --prefix frontend
+
+  post_build:
+    commands:
+      - echo "Syncing build output to S3..."
+      - aws s3 sync frontend/dist/ s3://$FRONTEND_BUCKET_NAME/ --delete
+      - echo "Creating CloudFront invalidation..."
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+artifacts:
+  files:
+    - frontend/dist/**/*
+  base-directory: "."
+
+cache:
+  paths:
+    - "frontend/node_modules/**/*"

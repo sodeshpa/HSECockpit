@@ -1,0 +1,82 @@
+[
+  {
+    "ruleId": "RULE-001",
+    "condition": "red",
+    "label": "Immediate Barrier Inspection Required",
+    "action": "Schedule an immediate on-site inspection of the RED-status barrier. Notify the site HSE manager and assign a responsible inspector within 24 hours.",
+    "applicableRecordTypes": ["barrier_observation"],
+    "keywords": ["red", "critical", "degraded"]
+  },
+  {
+    "ruleId": "RULE-002",
+    "condition": "amber",
+    "label": "Barrier Monitoring Escalation",
+    "action": "Increase monitoring frequency for AMBER-status barriers. Review maintenance history and schedule a condition assessment within 7 days.",
+    "applicableRecordTypes": ["barrier_observation"],
+    "keywords": ["amber", "degraded", "declining"]
+  },
+  {
+    "ruleId": "RULE-003",
+    "condition": "near_miss_increase",
+    "label": "Near-Miss Trend Escalation",
+    "action": "Escalate near-miss pattern to site manager for review. Conduct a root cause analysis of the contributing factors and implement preventive measures.",
+    "applicableRecordTypes": ["near_miss"],
+    "keywords": ["increase", "trend", "repeated", "frequent"]
+  },
+  {
+    "ruleId": "RULE-004",
+    "condition": "overdue_maintenance",
+    "label": "Overdue Maintenance Priority Scheduling",
+    "action": "Flag asset for priority maintenance scheduling. Assess whether the maintenance delay impacts barrier integrity or operational safety.",
+    "applicableRecordTypes": ["maintenance"],
+    "keywords": ["overdue", "delayed", "missed", "postponed"]
+  },
+  {
+    "ruleId": "RULE-005",
+    "condition": "critical_incident",
+    "label": "Critical Incident Response",
+    "action": "Initiate incident response protocol. Ensure site leadership is notified, affected area is secured, and investigation team is mobilized within 4 hours.",
+    "applicableRecordTypes": ["incident"],
+    "keywords": ["critical", "severe", "major", "fatality"]
+  },
+  {
+    "ruleId": "RULE-006",
+    "condition": "multiple_barriers_degraded",
+    "label": "Site-Wide Barrier Health Review",
+    "action": "Trigger a comprehensive site-wide barrier health review. Multiple degraded barriers at the same site indicate potential systemic issues requiring management attention.",
+    "applicableRecordTypes": ["barrier_observation"],
+    "keywords": ["multiple", "several", "widespread", "systemic"]
+  },
+  {
+    "ruleId": "RULE-007",
+    "condition": "compliance_non_compliant",
+    "label": "Compliance Corrective Action",
+    "action": "Initiate a corrective action plan for the non-compliant site. Document findings, assign responsible parties, and set a remediation deadline within 30 days.",
+    "applicableRecordTypes": ["barrier_observation", "incident", "maintenance"],
+    "keywords": ["non-compliant", "non_compliant", "violation", "breach"]
+  },
+  {
+    "ruleId": "RULE-008",
+    "condition": "high_risk_area",
+    "label": "High-Risk Area Enhanced Monitoring",
+    "action": "Implement enhanced monitoring for the identified high-risk area. Increase inspection frequency and ensure all safety barriers in the area are assessed within 48 hours.",
+    "applicableRecordTypes": ["incident", "near_miss", "barrier_observation"],
+    "keywords": ["high risk", "high_risk", "elevated", "danger"]
+  },
+  {
+    "ruleId": "RULE-009",
+    "condition": "recurring_near_miss",
+    "label": "Recurring Near-Miss Pattern Investigation",
+    "action": "Initiate a formal investigation into recurring near-miss patterns. Consider whether existing barriers are adequate and whether additional controls are needed.",
+    "applicableRecordTypes": ["near_miss"],
+    "keywords": ["recurring", "repeated", "pattern", "again"]
+  },
+  {
+    "ruleId": "RULE-010",
+    "condition": "asset_condition_poor",
+    "label": "Asset Condition Assessment Required",
+    "action": "Schedule a detailed asset condition assessment. Poor asset condition may compromise associated safety barriers and increase operational risk.",
+    "applicableRecordTypes": ["maintenance"],
+    "keywords": ["poor condition", "deteriorated", "worn", "failing", "end of life"]
+  }
+]

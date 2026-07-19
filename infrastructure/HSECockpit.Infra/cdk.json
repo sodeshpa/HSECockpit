@@ -1,0 +1,37 @@
+{
+  "app": "dotnet run --project . --no-launch-profile",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      ".git",
+      ".gitignore",
+      "obj",
+      "bin"
+    ]
+  },
+  "context": {
+    "environments": {
+      "dev": {
+        "account": "633339938619",
+        "region": "us-east-1"
+      },
+      "staging": {
+        "account": "REPLACE_WITH_STAGING_ACCOUNT_ID",
+        "region": "u-west-1"
+      },
+      "prod": {
+        "account": "REPLACE_WITH_PROD_ACCOUNT_ID",
+        "region": "eu-west-1"
+      }
+    },
+    "tags": {
+      "Project": "HSECockpit",
+      "ManagedBy": "CDK"
+    },
+    "projectName": "HSECockpit"
+  }
+}

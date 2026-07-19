@@ -1,0 +1,2586 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "Initialise AWS CDK project (C#) in `infrastructure/HSECockpit.Infra/`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473181
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406496770
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406770065
+      }
+    ],
+    "Create `NetworkStack`: VPC with 2 public + 2 private subnets, NAT Gateway, security groups": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473292
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406779198
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407284569
+      }
+    ],
+    "Create `DatabaseStack`: RDS PostgreSQL (Multi-AZ), DynamoDB table (DataQualityLog with TTL)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473358
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407289549
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407409888
+      }
+    ],
+    "Create `ComputeStack`: ECS Fargate cluster, task definition, ECR repository, Lambda functions for ingestion": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473425
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407414853
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407513491
+      }
+    ],
+    "Create `FrontendStack`: S3 bucket (static hosting), CloudFront distribution with OAI": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473490
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407518710
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407635840
+      }
+    ],
+    "Create `ApiGatewayStack`: HTTP API Gateway, VPC Link to ECS, Cognito User Pool + JWT authorizer": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473557
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407642103
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407909157
+      }
+    ],
+    "Create `ObservabilityStack`: CloudWatch log groups, metric alarms, X-Ray tracing config": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473638
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784407914357
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784408125501
+      }
+    ],
+    "Configure VPC endpoints: S3 Gateway, Secrets Manager interface, Bedrock interface": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473760
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784408131275
+      }
+    ],
+    "Configure EventBridge Scheduler for ingestion Lambda triggers": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473840
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432120261
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432188755
+      }
+    ],
+    "Set up Secrets Manager entries (placeholder): RDS connection string, Bedrock API config": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473907
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432194477
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432282291
+      }
+    ],
+    "Set up Systems Manager Parameter Store: RAG thresholds, risk score weights, ingestion schedule": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406473982
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432288123
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432350691
+      }
+    ],
+    "Deploy to `dev` environment and validate all resources provisioned": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474051
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784432356580
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443339939
+      }
+    ],
+    "Create CodePipeline with source stage (GitHub/CodeCommit connection)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474137
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434542155
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434652202
+      }
+    ],
+    "Create CodeBuild project for backend: `dotnet build` + `dotnet test` → Docker image → push to ECR": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474219
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434661585
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434783149
+      }
+    ],
+    "Create CodeBuild project for frontend: `npm ci` + `npm run build` → S3 sync + CloudFront invalidation": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474274
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434787763
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434918823
+      }
+    ],
+    "Create CodeBuild project for infrastructure: `cdk synth` → CloudFormation templates": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474338
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784434923443
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435024452
+      }
+    ],
+    "Configure staging deployment stage with ECS rolling update": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474396
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435028664
+      }
+    ],
+    "Configure production deployment stage with manual approval gate and blue/green ECS deploy": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474461
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435180134
+      }
+    ],
+    "Add WCAG accessibility scan (axe-core) to test stage": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474535
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435284578
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435601622
+      }
+    ],
+    "Configure pipeline notifications (SNS) for build failures": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474605
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435606153
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435677599
+      }
+    ],
+    "Create EF Core DbContext with PostgreSQL provider (Npgsql)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474667
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784435688036
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436667062
+      }
+    ],
+    "Define entity classes: `Site`, `Asset`, `CriticalBarrier`, `BarrierHealthObservation`, `Incident`, `NearMiss`, `MaintenanceRecord`, `RiskItem`, `ComplianceStatus`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474733
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436672006
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436690437
+      }
+    ],
+    "Apply CHECK constraints for status/severity enums per entity": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474796
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436702116
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436707435
+      }
+    ],
+    "Create foreign key relationships and indexes on `site_id`, `asset_id`, `barrier_id`, `observed_at`/`incident_date`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474865
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436718017
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436723115
+      }
+    ],
+    "Generate EF Core migration scripts (version-controlled)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474929
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436728165
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436831818
+      }
+    ],
+    "Create DynamoDB table schema for `DataQualityLog` (partition key: `source_category#ingestion_date`, sort key: `log_id`, TTL: 90 days)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406474994
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436837029
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436991728
+      }
+    ],
+    "Seed reference data: at least one pilot site and associated assets": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475053
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784436996719
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437147794
+      }
+    ],
+    "Configure connection string retrieval from AWS Secrets Manager": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475126
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437152531
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437300122
+      }
+    ],
+    "Create `BarrierIngestionFunction` Lambda (.NET 8) in `D4HSE.Ingestion` project": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475192
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437311700
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437588806
+      }
+    ],
+    "Configure EventBridge Scheduler trigger (configurable cron, default every 6 hours)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475256
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437606694
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437611658
+      }
+    ],
+    "Read source JSON/CSV files from S3 landing zone bucket (`s3://hse-landing-zone/barriers/`)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475315
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437623693
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437628885
+      }
+    ],
+    "Map source fields to `BarrierHealthObservation` canonical model": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475386
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437634812
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437639828
+      }
+    ],
+    "Integrate Data Validator: required fields, site/asset reference check (query RDS), date consistency, RAG status enum check": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475452
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437645542
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437650320
+      }
+    ],
+    "Write valid records to RDS `barrier_health_observations` table": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475569
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437655419
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437660950
+      }
+    ],
+    "Write validation failures to DynamoDB `DataQualityLog` with business-readable messages": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475640
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437666131
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437671075
+      }
+    ],
+    "Configure SQS dead-letter queue for failed Lambda invocations": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475714
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437682500
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437687504
+      }
+    ],
+    "Store last-ingestion timestamp in Parameter Store for UI display": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475816
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437693197
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437698232
+      }
+    ],
+    "Trigger post-ingestion embedding generation (invoke embedding Lambda)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406475900
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437708321
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437914448
+      }
+    ],
+    "Create `IncidentIngestionFunction` Lambda (.NET 8)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476056
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784437919823
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438084314
+      }
+    ],
+    "Configure EventBridge Scheduler trigger": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476138
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476702
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438196146
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438201382
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438434828
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438440129
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438480516
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443304552
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443360238
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443396259
+      }
+    ],
+    "Read source files from S3 (`s3://hse-landing-zone/incidents/`)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476221
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438104474
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438110328
+      }
+    ],
+    "Map to `Incident` and `NearMiss` entities with correct severity enum mapping": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476293
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438116037
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438121458
+      }
+    ],
+    "Apply Data Validator: required fields (incident_date, site_id, severity), date consistency, status enums": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476367
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438127663
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438133229
+      }
+    ],
+    "Write failures to DynamoDB `DataQualityLog`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476434
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476953
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438212640
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438217984
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438445638
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438451426
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438486272
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443311633
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443367343
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443402918
+      }
+    ],
+    "Ensure near misses are stored and queryable separately from incidents in RDS": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476507
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438139014
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438144634
+      }
+    ],
+    "Configure SQS dead-letter queue": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476579
+      },
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477001
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438180566
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438185450
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438456942
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438462325
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438492196
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443319187
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443374139
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443410554
+      }
+    ],
+    "Create `MaintenanceIngestionFunction` Lambda (.NET 8)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476663
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438235926
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438386818
+      }
+    ],
+    "Read source files from S3 (`s3://hse-landing-zone/maintenance/`)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476764
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438393512
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438399017
+      }
+    ],
+    "Map to `MaintenanceRecord` canonical model": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476832
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438404887
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438410254
+      }
+    ],
+    "Apply Data Validator: required fields (asset_id, maintenance_date, activity_type), asset reference check": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406476915
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438416384
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438421650
+      }
+    ],
+    "Implement `GET /api/v1/data-quality/summary` endpoint querying DynamoDB for counts of valid/flagged records by category and site": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477073
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438505181
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438783930
+      }
+    ],
+    "Return `data_quality_status` on all entity API responses so UI can surface quality labels": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477140
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438797736
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438894391
+      }
+    ],
+    "Read last-ingestion timestamp from Parameter Store for freshness display": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477224
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438803540
+      },
+      {
+        "executionId": "a5aee98b-4e98-4272-bcaf-c4789b497dae",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784438810163
+      }
+    ],
+    "Implement quality indicator banner React component (shown when one or more contributing records are flagged)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477295
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439634536
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439882214
+      }
+    ],
+    "Implement partial/stale metric label React component (shown when data category is absent or beyond freshness threshold)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477367
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439640704
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439888927
+      }
+    ],
+    "Configure Cognito User Pool with custom attributes: `role` (hse-manager, hse-data-owner, executive, admin)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477448
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439647152
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439895766
+      }
+    ],
+    "Create Cognito App Client for React SPA (PKCE flow)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477514
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439908345
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439915059
+      }
+    ],
+    "Configure API Gateway JWT authorizer with Cognito User Pool": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477582
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439920907
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439927341
+      }
+    ],
+    "Implement React auth context using `@aws-amplify/auth` or `amazon-cognito-identity-js`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477664
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439653317
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439901950
+      }
+    ],
+    "Create protected route wrapper component in React": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477729
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439932959
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439938995
+      }
+    ],
+    "Implement role-based access control middleware in .NET 8 API (claims-based)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477797
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439945594
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440193881
+      }
+    ],
+    "Create test users for each role in dev environment": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477868
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439951554
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440199833
+      }
+    ],
+    "Implement `GetBarriersByContext(siteId?, assetId?)` — returns barriers sorted by criticality_rank with current RAG status from RDS": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406477944
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784439958544
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440206400
+      }
+    ],
+    "Implement `GetBarrierTrend(barrierId, periodDays)` — returns ordered health observations for sparkline": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478016
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440219464
+      }
+    ],
+    "Implement `GetDegradedBarriers(siteId?)` — barriers where latest RAG status is worse than prior observation": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478100
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440226122
+      }
+    ],
+    "Apply conservative conflict rule: when multiple same-period observations conflict, use highest severity RAG status and set `data_quality_status = CONFLICT`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478264
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440232771
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440253310
+      }
+    ],
+    "Load RAG thresholds from AWS Systems Manager Parameter Store (not hardcoded)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478344
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440238766
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440259538
+      }
+    ],
+    "Expose via `GET /api/v1/barriers`, `/api/v1/barriers/{id}/trend`, `/api/v1/barriers/degraded`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478421
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440245930
+      }
+    ],
+    "Build site/asset cascading filter bar (React Query + Axios)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478511
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440458682
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440701650
+      }
+    ],
+    "Build barrier list component: name, site/asset, RAG badge (shadcn/ui Badge), trend arrow (↑ ↓ →), last assessed date": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478586
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440918646
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441202452
+      }
+    ],
+    "Highlight degraded barriers: Amber/Red background + degradation flag icon": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478676
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441223724
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441400402
+      }
+    ],
+    "Add trend sparkline per barrier (Recharts LineChart, last N observations, configurable N)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478755
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441230689
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441407070
+      }
+    ],
+    "Add data quality indicator banner (from TASK-007 component)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478823
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441428856
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441466578
+      }
+    ],
+    "Implement empty states:": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478895
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441436770
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441472915
+      }
+    ],
+    "Ensure all RAG colour indicators have accessible text labels (not colour-only)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406478962
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441443708
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441479128
+      }
+    ],
+    "Keyboard navigation through barrier list": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479044
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441449937
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441485350
+      }
+    ],
+    "Deploy to S3/CloudFront via CI/CD pipeline": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479108
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441456476
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441492061
+      }
+    ],
+    "Implement `GetIncidentSummary(siteId?, assetId?, fromDate, toDate)` — total count + breakdown by severity from RDS": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479177
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440465153
+      },
+      {
+        "executionId": "56403e60-323a-4a08-8c92-ae5ca587bfc6",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440708445
+      }
+    ],
+    "Implement `GetNearMissSummary(siteId?, assetId?, fromDate, toDate)` — count + trend vs prior period": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479255
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440925292
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440939730
+      }
+    ],
+    "Implement `GetSiteRiskScore(siteId)` — composite score using configurable weights from Parameter Store; return contributing factor breakdown": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479327
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784440932752
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441209380
+      }
+    ],
+    "Label score as partial when any contributing data category has quality issues": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479401
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441237343
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441251809
+      }
+    ],
+    "Expose via `GET /api/v1/incidents/summary`, `/api/v1/near-misses/summary`, `/api/v1/risk/score/{siteId}`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479476
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441244315
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441415041
+      }
+    ],
+    "Implement `GetRiskHeatmap(period)` — returns site-level risk exposure rows with Low/Medium/High/Critical banding": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479547
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441505725
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441731275
+      }
+    ],
+    "Risk banding thresholds loaded from Parameter Store (configuration-driven)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479621
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441513626
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441535797
+      }
+    ],
+    "Sites with higher incident severity/frequency appear at higher risk levels than lower-exposure sites": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479695
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441520165
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441542300
+      }
+    ],
+    "Expose via `GET /api/v1/risk/heatmap`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479764
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441527505
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441738091
+      }
+    ],
+    "Build date range picker (shadcn/ui DatePicker) and site/asset filter": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479836
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441753758
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441971548
+      }
+    ],
+    "Build incident summary card: total count, severity breakdown (Recharts BarChart)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479910
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441760829
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441978367
+      }
+    ],
+    "Build near-miss summary card: total count, trend vs prior period": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406479977
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441767161
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441984829
+      }
+    ],
+    "Build risk heatmap grid: sites × risk band (colour-coded with accessible text labels, Recharts HeatMap)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480055
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441775366
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441991859
+      }
+    ],
+    "Build site risk score card: score value, contributing factor breakdown, data quality label": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480149
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441782438
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784441998732
+      }
+    ],
+    "Drill-down: selecting a site risk score shows supporting incidents, near misses, open risks, and barrier signals": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480223
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442006540
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442021255
+      }
+    ],
+    "Keyboard navigation and screen-reader accessible on all interactive elements": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480383
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442013461
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442027589
+      }
+    ],
+    "Create OpenSearch Serverless collection (`hse-embeddings`) with vector search pipeline": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480454
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442083030
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442346249
+      }
+    ],
+    "Define index mapping: `record_id`, `record_type`, `site_id`, `asset_id`, `text_content`, `embedding` (knn_vector, dim 1024, cosine similarity)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480543
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442090091
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442353471
+      }
+    ],
+    "Create embedding generation Lambda: invoke Amazon Bedrock Titan Embeddings v2, write to OpenSearch": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480613
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442097585
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442360280
+      }
+    ],
+    "Trigger embedding Lambda post-ingestion (EventBridge rule on successful ingestion completion)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480694
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442839624
+      }
+    ],
+    "Implement `SemanticSearch(query, topK)` service method: embed query via Bedrock → k-NN search in OpenSearch → return ranked HSE records": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480769
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442105287
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442367544
+      }
+    ],
+    "Configure IAM roles for Lambda → Bedrock and Lambda → OpenSearch access": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480848
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442846725
+      }
+    ],
+    "Define predefined recommendation rules in S3 configuration file (JSON):": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480921
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442750900
+      }
+    ],
+    "Implement rule matcher service: given retrieved HSE context, identify applicable rules": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406480995
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442758261
+      }
+    ],
+    "Return matched rules as `RecommendedAction[]` with rule label, suggested action text, and triggering condition": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481122
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442765540
+      }
+    ],
+    "Rules loaded from S3 at service startup with caching; reloadable without code deploy": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481198
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442772430
+      }
+    ],
+    "Implement `POST /api/v1/copilot/query` controller": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481264
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442779633
+      }
+    ],
+    "Query flow:": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481328
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442786761
+      }
+    ],
+    "Response schema: `{ answer, citations: SourceRecord[], recommendedActions: RecommendedAction[], dataScope }`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481400
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442794337
+      }
+    ],
+    "Set `dataScope = out_of_scope` and return guidance message when question references data outside MVP categories": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481483
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442801388
+      }
+    ],
+    "Set `dataScope = partial` when retrieved records have quality flags": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481554
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442807822
+      }
+    ],
+    "Bedrock model ID and config loaded from Secrets Manager / Parameter Store (never hardcoded)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481629
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442815045
+      }
+    ],
+    "Implement prompt injection guardrails: sanitise user input, constrain system prompt": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481699
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442821801
+      }
+    ],
+    "Build chat-style input panel in cockpit sidebar (shadcn/ui components)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481767
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443191067
+      }
+    ],
+    "Display response with: answer text, citation list (source category, site, date), recommended actions section": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481839
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443198230
+      }
+    ],
+    "Apply \"Observed\" / \"Recommended\" badge (shadcn/ui Badge) to respective response sections": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481901
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443205405
+      }
+    ],
+    "Out-of-scope query: show friendly limitation message and suggest supported alternatives": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406481976
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443213265
+      }
+    ],
+    "Loading state with streaming indicator while Bedrock processes": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482046
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443220519
+      }
+    ],
+    "Keyboard accessible; focus management after response loads": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482117
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443227451
+      }
+    ],
+    "Implement `GetExecutiveKPIs()` — Barrier Health Score, Open Critical Risks count, Incident Count MTD, Compliance Rate": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482259
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442112632
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442375233
+      }
+    ],
+    "Implement `GetOpenCriticalRisks()` — risk items with severity=CRITICAL and status=OPEN from RDS": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482339
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442865292
+      }
+    ],
+    "Implement `GetBarrierHealthScore()` — portfolio-wide weighted percentage of GREEN barriers": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482411
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442871822
+      }
+    ],
+    "Implement `GetComplianceSummary()` — Compliant/Non-Compliant/Unknown counts by site": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482476
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442879289
+      }
+    ],
+    "All KPIs carry data quality constraint labels where applicable": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482546
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442886321
+      }
+    ],
+    "Expose `GET /api/v1/executive/kpis`, `/critical-risks`, `/barrier-health`, `/compliance`": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482629
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442893267
+      }
+    ],
+    "Build KPI tile row: Barrier Health Score, Open Critical Risks, Incident Count MTD, Compliance Rate": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482697
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443234793
+      }
+    ],
+    "Build Open Critical Risks list: site, description, days open": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482763
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443241764
+      }
+    ],
+    "Build barrier health score gauge with colour band (Recharts RadialBarChart — Green/Amber/Red)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482827
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443248923
+      }
+    ],
+    "Build compliance summary: Compliant/Non-Compliant/Unknown counts with site drill-down": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482898
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443255737
+      }
+    ],
+    "Apply data quality constraint labels to impacted KPIs": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406482971
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443262608
+      }
+    ],
+    "View designed for 3-minute review; no deep drill-down required": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483037
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443269696
+      }
+    ],
+    "Accessible: all colour indicators have text equivalents; keyboard navigable": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483107
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443276711
+      }
+    ],
+    "Verify barrier degradation is visible in both operational cockpit (TASK-010) and executive cockpit (TASK-019)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483180
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443061549
+      }
+    ],
+    "Verify data quality labels propagate consistently from Lambda ingestion (TASK-004–006) through .NET API to React UI": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483253
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443069044
+      }
+    ],
+    "Verify site filter applied in Barrier Cockpit is consistent with same filter in Risk Dashboard": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483323
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443076278
+      }
+    ],
+    "Verify Executive KPIs update when new records are ingested via S3 → Lambda pipeline": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483393
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443083351
+      }
+    ],
+    "Verify Cognito auth flow works across all views with correct role-based access": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483472
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443091070
+      }
+    ],
+    "Run automated accessibility checks (axe-core, WCAG 2.1 AA) on all UI views via CI/CD": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483539
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443030433
+      }
+    ],
+    "Verify colour contrast ratios on RAG badges, risk heatmap, compliance indicators": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483611
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443037557
+      }
+    ],
+    "Verify keyboard navigation for: barrier list, filter controls, risk heatmap, AI Copilot chat, executive tiles": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483681
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443044769
+      }
+    ],
+    "Add `aria-label` attributes on all icon-only controls and colour-coded indicators": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483746
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443051987
+      }
+    ],
+    "Document known limitations for manual assistive-technology testing": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483824
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443098103
+      }
+    ],
+    "Audit all EF Core queries for parameterisation (no raw SQL string interpolation)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406483919
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442964895
+      }
+    ],
+    "Confirm no secrets, API keys, or connection strings in source code or Docker images": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484037
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442943079
+      }
+    ],
+    "Verify all secrets retrieved from AWS Secrets Manager at runtime": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484104
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442950385
+      }
+    ],
+    "Confirm environment variables documented in `.env.example` (placeholder values only)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484170
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442957484
+      }
+    ],
+    "Input validation on all API endpoints via FluentValidation (reject unexpected types, enforce length limits)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484240
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442979353
+      }
+    ],
+    "LLM prompt construction reviewed to prevent prompt injection via user input": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484307
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442972168
+      }
+    ],
+    "Verify WAF rules on CloudFront distribution (rate limiting, SQL injection patterns)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484381
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442913913
+      }
+    ],
+    "Verify RDS security group allows only ECS and Lambda access (port 5432)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484450
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442922192
+      }
+    ],
+    "Confirm encryption at rest: RDS (KMS), S3 (SSE-S3), DynamoDB (AWS managed), OpenSearch (KMS)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484521
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442928881
+      }
+    ],
+    "Confirm encryption in transit: TLS 1.2+ on all endpoints": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484589
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442935936
+      }
+    ],
+    "Enable CloudTrail for API audit logging": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484667
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442986635
+      }
+    ],
+    "Configure structured JSON logging on all Lambda functions (CloudWatch Logs)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484732
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442994292
+      }
+    ],
+    "Configure structured logging on ECS .NET API (Serilog → CloudWatch)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484802
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443008873
+      }
+    ],
+    "Create CloudWatch dashboard: API latency (p50/p95/p99), error rates, Lambda invocation counts, RDS connections": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484871
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443016372
+      }
+    ],
+    "Create CloudWatch Alarms: API error rate > 5%, Lambda DLQ depth > 0, RDS CPU > 80%, ingestion failures": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406484940
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442900521
+      }
+    ],
+    "Enable X-Ray tracing on API Gateway → ECS → RDS path": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485014
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443001461
+      }
+    ],
+    "Track data quality metrics over time (ingestion success rate, flagged record percentage)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485087
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443023567
+      }
+    ],
+    "Configure SNS notifications for critical alarms": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485161
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784442906984
+      }
+    ],
+    "Upload representative pilot data to S3 landing zone for at least one site covering all three source categories": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485227
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443106087
+      }
+    ],
+    "Verify end-to-end: S3 upload → Lambda ingestion → RDS storage → API serving → React display": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485303
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443112981
+      }
+    ],
+    "Validate SC-001: HSE managers identify top at-risk barriers in < 2 minutes": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485371
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443120980
+      }
+    ],
+    "Validate SC-002: ≥ 90% of records accepted or flagged with readable quality issue": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485447
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443129510
+      }
+    ],
+    "Validate SC-003: ≥ 95% of degraded barriers highlighted in cockpit": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485513
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443136456
+      }
+    ],
+    "Validate SC-004: AI Copilot answers sample questions in < 1 minute each (Bedrock response time included)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485623
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443144702
+      }
+    ],
+    "Validate SC-006: Executive KPIs reviewable in < 3 minutes": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485739
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443152933
+      }
+    ],
+    "Validate SC-007: Site risk ordering consistent for ≥ 90% of test cases": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485808
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443159861
+      }
+    ],
+    "Collect pilot user feedback (SC-005 target: ≥ 80% report improved posture understanding)": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485884
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443167256
+      }
+    ],
+    "Document any gaps vs. success criteria for post-MVP backlog": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406485952
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443174368
+      }
+    ],
+    "Performance test: API response times < 2s under expected pilot load": [
+      {
+        "executionId": "c75f4637-592c-4eaa-9cc4-eccf0fe111f2",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784406486024
+      },
+      {
+        "executionId": "b24daa76-72f9-4a8e-8f5a-6e8946c66028",
+        "chatSessionId": "sess_6f7a86e6-77d5-4eab-87bd-fcf21aa3a011",
+        "timestamp": 1784443182080
+      }
+    ]
+  }
+}

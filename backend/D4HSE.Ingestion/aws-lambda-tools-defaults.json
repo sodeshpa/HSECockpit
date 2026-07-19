@@ -1,0 +1,15 @@
+{
+  "Information": [
+    "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda CLI.",
+    "To learn more about the Lambda CLI: https://github.com/aws/aws-extensions-for-dotnet-cli"
+  ],
+  "profile": "",
+  "region": "",
+  "configuration": "Release",
+  "function-runtime": "dotnet8",
+  "function-memory-size": 512,
+  "function-timeout": 300,
+  "function-handler": "D4HSE.Ingestion::D4HSE.Ingestion.Functions.BarrierIngestionFunction::FunctionHandler",
+  "function-architecture": "x86_64",
+  "framework": "net8.0"
+}
