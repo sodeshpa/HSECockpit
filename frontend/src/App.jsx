@@ -3,9 +3,11 @@ import { AuthProvider } from "./auth/AuthContext";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { BarrierCockpit } from "./pages/BarrierCockpit/BarrierCockpit";
 import { RiskDashboard } from "./pages/RiskDashboard/RiskDashboard";
+import { ExecutiveCockpit } from "./pages/ExecutiveCockpit/ExecutiveCockpit";
+import { AICopilot } from "./pages/AICopilot/AICopilot";
 import { Login } from "./pages/Login";
 import { useAuth } from "./auth/useAuth";
-import { Shield, BarChart3, LogOut } from "lucide-react";
+import { Shield, BarChart3, Gauge, MessageSquare, LogOut } from "lucide-react";
 
 function Sidebar() {
   const { user, logout, isAuthenticated } = useAuth();
@@ -28,6 +30,18 @@ function Sidebar() {
           <NavLink to="/risk" className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blue-50 text-blue-700" : "text-gray-700 hover:bg-gray-100"}`}>
             <BarChart3 className="h-5 w-5" aria-hidden="true" />
             Risk Dashboard
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/executive" className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blue-50 text-blue-700" : "text-gray-700 hover:bg-gray-100"}`}>
+            <Gauge className="h-5 w-5" aria-hidden="true" />
+            Executive Cockpit
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/copilot" className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blue-50 text-blue-700" : "text-gray-700 hover:bg-gray-100"}`}>
+            <MessageSquare className="h-5 w-5" aria-hidden="true" />
+            AI Copilot
           </NavLink>
         </li>
       </ul>
@@ -53,6 +67,8 @@ function AppShell() {
           <Route path="/login" element={<Login />} />
           <Route path="/barriers" element={<ProtectedRoute><BarrierCockpit /></ProtectedRoute>} />
           <Route path="/risk" element={<ProtectedRoute><RiskDashboard /></ProtectedRoute>} />
+          <Route path="/executive" element={<ProtectedRoute><ExecutiveCockpit /></ProtectedRoute>} />
+          <Route path="/copilot" element={<ProtectedRoute><AICopilot /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/barriers" replace />} />
         </Routes>
       </main>

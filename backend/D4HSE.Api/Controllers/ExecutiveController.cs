@@ -12,7 +12,7 @@ namespace D4HSE.Api.Controllers;
 /// </summary>
 [ApiController]
 [Route("api/v1/executive")]
-[Authorize(Policy = PolicyNames.Executive)]
+[Authorize]
 public class ExecutiveController : ControllerBase
 {
     private readonly ExecutiveService _executiveService;
